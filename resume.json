@@ -1,0 +1,117 @@
+{
+  "$schema": "./resume.schema.json",
+  "basics": {
+    "name": "Jasmeet Oberai",
+    "label": "Software Developer",
+    "email": "jasoberai@gmail.com",
+    "phone": "206-453-9615",
+    "url": "http://www.jasmeetoberai.com",
+    "summary": "",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "jasmeeto",
+        "url": "https://github.com/jasmeeto"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Mobile/Web",
+      "keywords": ["iOS", "Android", "JavaScript", "CSS3", "HTML5", "Node.js"]
+    },
+    {
+      "category": "Backend",
+      "keywords": ["Java", "C/C++", "C#", "Ruby", "Python", "Bash"]
+    },
+    {
+      "category": "Frameworks/Tools",
+      "keywords": ["Spring", "Spark", "Kafka", "ReactJS", "RoR", "OpenGL", "django", "jQuery", "Git"]
+    }
+  ],
+  "work": [
+    {
+      "name": "Bloomberg LP",
+      "location": "New York, NY",
+      "position": "Software Developer - Bloomberg Query Language Team",
+      "startDate": "2016-09",
+      "endDate": "",
+      "highlights": [
+        "Building and enhancing a state of the art data analytics platform currently serving approx 40000 daily users",
+        "Implemented many core analytics engine features, optimizations and improvements",
+        "Added batch processing interface and backtesting support for Jupyter frontend using ComDB2 and RabbitMQ",
+        "Assisted in setting up horizontal scalability service for distributed processing of queries using Java and Spark",
+        "Expanded CI/CD infrastructure using Python, jMeter and Jenkins",
+        "School captain for hiring at University of Waterloo"
+      ],
+      "keywords": ["Java", "Spark", "Spring", "Python", "C++", "RabbitMQ", "ComDB2", "Bash"]
+    },
+    {
+      "name": "Snap Inc.",
+      "location": "Venice, CA",
+      "position": "Software Development Intern - Snaplabs Team - iOS",
+      "startDate": "2015-09",
+      "endDate": "2015-12",
+      "highlights": [
+        "Worked with and programmed both firmware and iOS integration for new, cutting edge Snap Spectacles"
+      ],
+      "keywords": ["Git", "Xcode", "Asana", "GDB"]
+    },
+    {
+      "name": "Bloomberg LP",
+      "location": "New York, NY",
+      "position": "SDE Intern - Bloomberg Query Language Team",
+      "startDate": "2015-01",
+      "endDate": "2015-04",
+      "highlights": [
+        "Worked on adding and optimizing functionality for BQL engine core, mainly in Java"
+      ],
+      "keywords": ["Hadoop", "Spark", "Vectorwise", "Spring", "ANTLR", "MySQL", "R"]
+    },
+    {
+      "name": "Amazon",
+      "location": "Seattle, WA",
+      "position": "SDE Intern - Instant Video - Android",
+      "startDate": "2014-05",
+      "endDate": "2014-08",
+      "highlights": [
+        "Added cross team HTTP service integration for the application and worked on visual design for storefront"
+      ],
+      "keywords": ["Git", "Eclipse", "Android SDK", "EasyMock", "PowerMock"]
+    },
+    {
+      "name": "Flipp",
+      "location": "Toronto, ON",
+      "position": "Software Development Intern - Backend - RoR",
+      "startDate": "2013-01",
+      "endDate": "2013-04",
+      "highlights": [
+        "Worked on web application implemented in Ruby on Rails running on Amazon Web Services (including S3)"
+      ],
+      "keywords": ["RoR", "HTML5", "CSS3", "MySQL", "FogBugz", "Git"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "ItinPlanner",
+      "description": "Travel planning Android app created during fourth year as a design project",
+      "url": "https://play.google.com/store/apps/details?id=com.jbap.itinplanner"
+    },
+    {
+      "name": "SketchServer",
+      "description": "A real-time multi user sketch pad made using Node.js, Backbone.js, Omni.js, HTML5, and CSS3",
+      "url": "http://git.io/tuKCsQ"
+    }
+  ],
+  "projectsUrl": "http://www.jasmeetoberai.com/projects",
+  "education": [
+    {
+      "institution": "University of Waterloo",
+      "location": "Waterloo, ON",
+      "studyType": "Bachelor of Software Engineering",
+      "startDate": "2011-09",
+      "endDate": "2016-12",
+      "courses": ["Security", "Operating Systems", "Concurrency", "Artificial Intelligence"]
+    }
+  ]
+}

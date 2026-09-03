@@ -1,0 +1,397 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[11pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.54in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{mdwlist}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{marvosym}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{hyphenat}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\definecolor{greyish}{RGB}{168,168,168}
+\definecolor{blackish}{RGB}{70,70,70}
+
+
+\def\labelitemi{\textbf{$\rightarrow$}}
+\renewcommand*\rmdefault{lmss}
+
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% ------------------------------
+% subsection template
+% ------------------------------
+\newcommand{\subsectioncustomend}[1]
+{
+\vspace{-0.8em}
+\subsection*{#1}
+}
+
+\newcommand{\subsectioncustom}[1]
+{
+\hrule
+\subsectioncustomend{#1}
+}
+
+
+% ------------------------------
+% work section template end
+% ------------------------------
+\newcommand{\worksectionend}[5]
+{
+\begin{tabularx}{\textwidth}{Xr}
+\textbf{#1}
+&
+\textbf{#2}
+&
+\emph{#3}
+&
+\emph{#4}
+\end{tabularx}
+\vspace{-1.2em}
+{#5}
+}
+
+% ------------------------------
+% work section template between
+% ------------------------------
+\newcommand{\worksection}[5]
+{
+\worksectionend{#1}{#2}{#3}{#4}{#5}
+%\vspace{-0.5em}
+\vspace{-1.2em}
+\textcolor{greyish}{\hrule width 0.98\textwidth height 0.1pt}
+%\vspace{.2em}
+}
+
+% ------------------------------
+% school section template end
+% ------------------------------
+\newcommand{\schoolsectionend}[5]{
+\worksectionend{#1}{#2}{#3}{#4}
+{
+\vspace{0.5em}
+
+\begin{adjustwidth}{0.4em}{0em}
+
+#5
+
+\end{adjustwidth}
+}
+
+}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}{C\texttt{++}}
+
+% strech line spacing
+\renewcommand{\baselinestretch}{1.17}\normalsize
+
+% ------------------------------
+% End Templates
+% ------------------------------
+
+
+% ------------------------------
+% Begin Document
+% ------------------------------
+
+\begin{document}
+
+\fontdimen2\font=3.0pt
+
+
+\title{Resume |  Jasmeet Oberai }
+
+
+\author{Jasmeet Oberai - jasoberai@gmail.com }
+
+
+\begin{center}
+{\color{blackish}{\Huge {\textbf{ Jasmeet Oberai }}}}
+
+%{\color{blackish}{\Huge {\textbf{Jasmeet Oberai}}} \hspace{6em} \Large {\textbf {4A Software Engineering}}}
+
+\end{center}
+
+
+\begin{center}
+\Mundus
+\hspace{0.1em}
+\href{ http://www.jasmeetoberai.com }{
+        www.jasmeetoberai.com
+} 
+        \faGithub*
+        \href{ https://github.com/jasmeeto }{
+				github.com/jasmeeto
+		} 
+\Letter
+\hspace{0.1em}
+\href{mailto:jasoberai@gmail.com }{ jasoberai@gmail.com }
+\Mobilefone
+\hspace{0.1em}
+206-453-9615 
+\end{center}
+
+
+\subsectioncustom{Skills Summary}
+
+\begin{itemize*}
+  %\renewcommand\labelitemi{$\rightarrow$}
+        \item{
+            Mobile/Web :
+                 iOS
+                ,  Android
+                ,  JavaScript
+                ,  CSS3
+                ,  HTML5
+                ,  Node.js
+        }
+        \item{
+            Backend :
+                 Java
+                ,  C/\CPP
+                ,  C\#
+                ,  Ruby
+                ,  Python
+                ,  Bash
+        }
+        \item{
+            Frameworks/Tools :
+                 Spring
+                ,  Spark
+                ,  Kafka
+                ,  ReactJS
+                ,  RoR
+                ,  OpenGL
+                ,  django
+                ,  jQuery
+                ,  Git
+        }
+  %\item{ Software Engineer graduated from the University of Waterloo looking for experience in the vast field of Computer Software. â€¢  Agile and iterative, I love to test and I love to script â€¢ I also have strong teamwork skills along with excellent analytical, organizational and communication skills }
+\end{itemize*}
+
+
+
+
+\subsectioncustom{Experience}
+
+\begin{flushleft}
+
+{
+\worksection
+    {
+        Bloomberg LP
+    }
+    {
+        New York, NY
+    }
+    {
+        Software Developer - Bloomberg Query Language Team
+    }
+    {
+        Sep 2016
+        - Present
+    }
+    {
+        \begin{itemize*}
+        {
+                \item { Building and enhancing a state of the art data analytics platform currently serving approx 40000 daily users }
+                \item { Implemented many core analytics engine features, optimizations and improvements }
+                \item { Added batch processing interface and backtesting support for Jupyter frontend using ComDB2 and RabbitMQ }
+                \item { Assisted in setting up horizotal scalability service for distributed processing of queries using Java and Spark }
+                \item { Expanded CI/CD infrastructure using Python, jMeter and Jenkins }
+                \item { School captain for hiring at University of Waterloo }
+                \item { Tools/Frameworks Used: Java, Spark, Spring, Python, \CPP, RabbitMQ, ComDB2, Bash }
+        }
+        \end{itemize*}
+    }
+}
+{
+\worksection
+    {
+        Snap Inc.
+    }
+    {
+        Venice, CA
+    }
+    {
+        Software Development Intern - Snaplabs Team - iOS
+    }
+    {
+        Sep 2015
+        - Dec 2015
+    }
+    {
+        \begin{itemize*}
+        {
+                \item { Worked with and programmed both firmware and iOS integration for new, cutting edge Snap Spectales }
+                \item { Tools/Frameworks Used: Git, Xcode, Asana, GDB }
+        }
+        \end{itemize*}
+    }
+}
+{
+\worksection
+    {
+        Bloomberg LP
+    }
+    {
+        New York, NY
+    }
+    {
+        SDE Intern - Bloomberg Query Language Team
+    }
+    {
+        Jan 2015
+        - Apr 2015
+    }
+    {
+        \begin{itemize*}
+        {
+                \item { Worked on adding and optimizing functionality for BQL engine core, mainly in Java }
+                \item { Tools/Frameworks Used: Hadoop, Spark, Vectorwise, Spring, ANTLR, MySQL, R }
+        }
+        \end{itemize*}
+    }
+}
+{
+\worksection
+    {
+        Amazon
+    }
+    {
+        Seattle, WA
+    }
+    {
+        SDE Intern - Instant Video - Android
+    }
+    {
+        May 2014
+        - Aug 2014
+    }
+    {
+        \begin{itemize*}
+        {
+                \item { Added cross team HTTP service integration for the application and worked on visual design for storefront }
+                \item { Tools/Frameworks Used: Git, Eclipse, Android SDK, EasyMock, PowerMock }
+        }
+        \end{itemize*}
+    }
+}
+{
+\worksectionend
+    {
+        Flipp
+    }
+    {
+        Toronto, ON
+    }
+    {
+        Software Development Intern - Backend - RoR
+    }
+    {
+        Jan 2013
+        - Apr 2013
+    }
+    {
+        \begin{itemize*}
+        {
+                \item { Worked on web application implemented in Ruby on Rails running on Amazon Web Services (including S3) }
+                \item { Tools/Frameworks Used: RoR, HTML5, CSS3, MySQL, FogBugz, Git }
+        }
+        \end{itemize*}
+    }
+}
+
+\end{flushleft}
+
+
+\subsectioncustom{Personal Projects}
+\vspace{-0.5em}
+\begin{flushleft}
+    {
+        \textcolor{greyish}{ \href{ http://www.jasmeetoberai.com/projects }{ http://www.jasmeetoberai.com/projects }}
+    }
+        \\
+        {
+        \href{ https://play.google.com/store/apps/details?id=com.jbap.itinplanner }{\textbf{ ItinPlanner }}: Travel planning Android app created during fourth year as a design project
+        }
+        \\
+        {
+        \href{ http://git.io/tuKCsQ }{\textbf{ SketchServer }}: A real-time multi user sketch pad made using Node.js, Backbone.js, Omni.js,HTML5, and CSS3
+        }
+\end{flushleft}
+
+
+
+
+\subsectioncustom{Education}
+\begin{flushleft}
+    \schoolsectionend
+    {
+      University of Waterloo
+    }
+    {
+    Waterloo ON
+    }
+    {
+    Bachelor of Software Engineering
+    }
+    {
+        Sep 2011
+        - Dec 2016
+    }
+    {
+        \textbf{Relevant Courses:}
+             Security
+            ,  Operating Systems
+            ,  Concurrency
+            ,  Artificial Intelligence
+    }
+\end{flushleft}
+
+
+
+\end{document}
+
+% ------------------------------
+% End Document
+% ------------------------------
