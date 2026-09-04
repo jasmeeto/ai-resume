@@ -1,0 +1,173 @@
+:root {
+  --blackish: #464646;
+  --greyish: #a8a8a8;
+  --link: #2b5797;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--blackish);
+  font-size: 10.5pt;
+  line-height: 1.35;
+}
+
+#resume {
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.5in 0.54in;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 0.6em;
+}
+.header h1 {
+  font-size: 26pt;
+  font-weight: 700;
+  margin: 0 0 0.25em;
+  letter-spacing: 0.01em;
+}
+.header .label {
+  font-size: 11pt;
+  color: var(--greyish);
+  margin-bottom: 0.4em;
+}
+.contact {
+  font-size: 9.5pt;
+  color: var(--blackish);
+}
+.contact span.sep {
+  color: var(--greyish);
+  margin: 0 0.6em;
+}
+
+/* Sections */
+section {
+  margin-bottom: 0.9em;
+}
+section h2 {
+  font-size: 12pt;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-top: 1px solid var(--blackish);
+  padding-top: 0.35em;
+  margin: 0 0 0.5em;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.skills-list li {
+  margin-bottom: 0.3em;
+}
+.skills-list .category {
+  font-weight: 700;
+}
+
+/* Work / Education entries */
+.entry {
+  margin-bottom: 0.7em;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid var(--greyish);
+  break-inside: avoid;
+}
+.entry:last-child {
+  border-bottom: none;
+}
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+}
+.entry-header .org {
+  font-weight: 700;
+}
+.entry-header .dates {
+  font-weight: 700;
+  white-space: nowrap;
+}
+.entry-subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 0.35em;
+}
+.entry ul.highlights {
+  margin: 0.3em 0 0;
+  padding-left: 1.2em;
+}
+.entry ul.highlights li {
+  margin-bottom: 0.15em;
+}
+.entry .keywords {
+  font-size: 9pt;
+  color: var(--greyish);
+  font-style: italic;
+  margin-top: 0.3em;
+}
+
+/* Projects */
+.projects-intro {
+  color: var(--greyish);
+  margin: 0 0 0.4em;
+}
+.project-item {
+  margin-bottom: 0.3em;
+}
+.project-item .name {
+  font-weight: 700;
+}
+
+/* Education */
+.courses {
+  margin-top: 0.3em;
+}
+.courses .label {
+  font-weight: 700;
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.5in 0.54in;
+  }
+  body {
+    font-size: 10pt;
+  }
+  #resume {
+    padding: 0;
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .entry-header, .entry-subheader {
+    flex-direction: column;
+    gap: 0.1em;
+  }
+}

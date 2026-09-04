@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Resume",
+  "description": "Data schema consumed by index.html to render the resume. Dates are YYYY-MM; leave endDate empty for a current position.",
+  "type": "object",
+  "required": ["basics", "work", "education"],
+  "properties": {
+    "basics": {
+      "type": "object",
+      "required": ["name", "email"],
+      "properties": {
+        "name": { "type": "string" },
+        "label": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "url": { "type": "string" },
+        "summary": { "type": "string" },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["network", "url"],
+            "properties": {
+              "network": { "type": "string" },
+              "username": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "keywords"],
+        "properties": {
+          "category": { "type": "string" },
+          "keywords": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "work": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "position", "startDate"],
+        "properties": {
+          "name": { "type": "string", "description": "Company name" },
+          "location": { "type": "string" },
+          "position": { "type": "string" },
+          "startDate": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+          "endDate": { "type": "string", "pattern": "^([0-9]{4}-[0-9]{2})?$", "description": "Empty string means Present" },
+          "highlights": { "type": "array", "items": { "type": "string" } },
+          "keywords": { "type": "array", "items": { "type": "string" }, "description": "Tools/frameworks used, shown as a summary line" }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "projectsUrl": { "type": "string" },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["institution", "studyType", "startDate"],
+        "properties": {
+          "institution": { "type": "string" },
+          "location": { "type": "string" },
+          "studyType": { "type": "string" },
+          "startDate": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+          "endDate": { "type": "string", "pattern": "^([0-9]{4}-[0-9]{2})?$" },
+          "courses": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}
