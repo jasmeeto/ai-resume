@@ -47,7 +47,7 @@ a:hover {
 }
 .header .label {
   font-size: 11pt;
-  color: var(--greyish);
+  color: #666;
   margin-bottom: 0.4em;
 }
 .contact {
