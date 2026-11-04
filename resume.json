@@ -4,7 +4,6 @@
     "name": "Jasmeet Oberai",
     "label": "Software Developer",
     "email": "jasoberai@gmail.com",
-    "phone": "206-453-9615",
     "url": "http://www.jasmeetoberai.com",
     "summary": "",
     "profiles": [
@@ -17,12 +16,12 @@
   },
   "skills": [
     {
-      "category": "Mobile/Web",
-      "keywords": ["JavaScript", "React", "Next.js", "HTML5", "CSS3", "iOS", "Android", "Node.js"]
-    },
-    {
       "category": "Backend",
       "keywords": ["Python", "Flask", "Java", "C/C++", "C#", "Bash"]
+    },
+    {
+      "category": "Mobile/Web",
+      "keywords": ["JavaScript", "React", "Next.js", "HTML5", "CSS3", "iOS", "Android", "Node.js"]
     },
     {
       "category": "Frameworks/Tools",

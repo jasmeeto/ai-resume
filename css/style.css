@@ -166,6 +166,38 @@ section h2 {
 }
 
 @media (max-width: 640px) {
+  #resume {
+    padding: 0.25in 0.25in;
+    overflow-x: hidden;
+  }
+
+  .header {
+    text-align: left;
+  }
+
+  .header h1 {
+    font-size: 20pt;
+  }
+
+  .contact {
+    font-size: 8.5pt;
+    line-height: 1.6;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .contact a {
+    word-break: break-all;
+    display: inline;
+  }
+
+  .contact span.sep {
+    margin: 0 0.3em;
+    white-space: nowrap;
+  }
+
   .entry-header, .entry-subheader {
     flex-direction: column;
     gap: 0.1em;
