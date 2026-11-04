@@ -54,6 +54,10 @@ a:hover {
   font-size: 9.5pt;
   color: var(--blackish);
 }
+.contact i {
+  margin-right: 0.3em;
+  color: var(--greyish);
+}
 .contact span.sep {
   color: var(--greyish);
   margin: 0 0.6em;

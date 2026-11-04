@@ -24,17 +24,18 @@ function dateRange(start, end) {
 function renderContact(basics) {
   const items = [];
   if (basics.url) {
-    items.push(`<a href="${escapeHtml(basics.url)}">${escapeHtml(basics.url.replace(/^https?:\/\//, ""))}</a>`);
+    items.push(`<i class="fa-solid fa-globe"></i> <a href="${escapeHtml(basics.url)}">${escapeHtml(basics.url.replace(/^https?:\/\//, ""))}</a>`);
   }
   for (const profile of basics.profiles || []) {
     const label = profile.username ? `${profile.network}/${profile.username}` : profile.network;
-    items.push(`<a href="${escapeHtml(profile.url)}">${escapeHtml(label)}</a>`);
+    const icon = profile.network.toLowerCase() === 'github' ? 'fa-brands fa-github' : 'fa-solid fa-link';
+    items.push(`<i class="${icon}"></i> <a href="${escapeHtml(profile.url)}">${escapeHtml(label)}</a>`);
   }
   if (basics.email) {
-    items.push(`<a href="mailto:${escapeHtml(basics.email)}">${escapeHtml(basics.email)}</a>`);
+    items.push(`<i class="fa-solid fa-envelope"></i> <a href="mailto:${escapeHtml(basics.email)}">${escapeHtml(basics.email)}</a>`);
   }
   if (basics.phone) {
-    items.push(escapeHtml(basics.phone));
+    items.push(`<i class="fa-solid fa-phone"></i> ${escapeHtml(basics.phone)}`);
   }
   return items.join('<span class="sep">&bull;</span>');
 }
