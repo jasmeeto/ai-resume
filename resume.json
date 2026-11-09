@@ -25,7 +25,7 @@
     },
     {
       "category": "Frameworks/Tools",
-      "keywords": ["SNS", "Cloudflare", "DynamoDB", "Spring", "Spark", "Kafka", "Git", "Django"]
+      "keywords": ["SNS", "Cloudflare", "DynamoDB", "Spring", "Spark", "Kafka", "Git", "Django", "Claude Code", "Codex"]
     }
   ],
   "work": [
@@ -45,7 +45,7 @@
         "Built Sparks platform to suggest actions to creators, tracking metrics for experiments including annual membership and top post engagement features",
         "Supported oncall for notification platform (emails, push, in-app), media platform, and experimentation platform"
       ],
-      "keywords": ["Python", "Flask", "React", "Next.js", "DynamoDB", "Mux", "Cloudflare", "Mailgun", "SNS", "FCM", "APNS"]
+      "keywords": ["Python", "Flask", "React", "Next.js", "DynamoDB", "Mux", "Cloudflare", "Mailgun", "SNS", "FCM", "APNS", "Claude Code", "Codex"]
     },
     {
       "name": "Bloomberg LP",
