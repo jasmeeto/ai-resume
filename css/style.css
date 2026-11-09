@@ -253,6 +253,21 @@ section h2 {
     overflow-x: hidden;
   }
 
+  .print-button {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    font-size: 12pt;
+    padding: 10px 16px;
+    justify-content: center;
+  }
+
+  .print-button i {
+    font-size: 14pt;
+  }
+
   .header {
     text-align: left;
   }
