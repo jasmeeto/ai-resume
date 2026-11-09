@@ -146,7 +146,11 @@ function renderEducation(education = []) {
 function render(data) {
   const root = document.getElementById("resume");
   const basics = data.basics || {};
+  const isInIframe = window.self !== window.top;
   root.innerHTML = `
+    ${!isInIframe ? `<button id="print-button" class="print-button" onclick="window.print()">
+      <i class="fa-solid fa-file-pdf"></i> Print Resume as PDF
+    </button>` : ''}
     <div class="header">
       <h1>${escapeHtml(basics.name || "")}</h1>
       ${basics.label ? `<div class="label">${escapeHtml(basics.label)}</div>` : ""}

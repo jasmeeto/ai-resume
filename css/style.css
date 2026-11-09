@@ -24,6 +24,34 @@ body {
   max-width: 8.5in;
   margin: 0 auto;
   padding: 0.5in 0.54in;
+  position: relative;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--link);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14pt;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  transition: background-color 0.2s;
+}
+
+.print-button:hover {
+  background-color: #1e4378;
+}
+
+.print-button i {
+  font-size: 16pt;
 }
 
 a {
@@ -167,6 +195,9 @@ section h2 {
   #resume {
     padding: 0;
     max-width: none;
+  }
+  .print-button {
+    display: none !important;
   }
   .header {
     margin-bottom: 0.5em;
