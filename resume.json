@@ -36,13 +36,13 @@
       "startDate": "2022-02",
       "endDate": "2026-10",
       "highlights": [
-        "Refactored creator onboarding experience with UX research collaboration, implementing archetypes and profiles to reduce account creation steps and accelerate creator setup",
-        "Built Sparks platform to suggest actions to creators, tracking metrics for experiments including annual membership and top post engagement features",
         "Contributed to migration of 200+ notifications to new fanout platform, improving performance by 80% for push/in-app notifications and 55% for email at scale (billions of notifications per year)",
         "Improved scalability: when creator audience grows 4x, latency now increases by only 33% for push/in-app and 60% for email vs 186% on legacy platform",
         "Encouraged cross-team migration effort using AI migration skills, completing 80% of work in 6 weeks across 10 teams",
         "Implemented in-app notifications with persistent DynamoDB store and integrated push/in-app notifications into unified schema",
         "Owned notification settings migration from columnar to row-based model with unified API using dual read/write logic, reducing complexity and unblocking product teams",
+        "Refactored creator onboarding experience with UX research collaboration, implementing archetypes and profiles to reduce account creation steps and accelerate creator setup",
+        "Built Sparks platform to suggest actions to creators, tracking metrics for experiments including annual membership and top post engagement features",
         "Supported oncall for notification platform (emails, push, in-app), media platform, and experimentation platform"
       ],
       "keywords": ["Python", "Flask", "React", "Next.js", "DynamoDB", "Mux", "Cloudflare", "Mailgun", "SNS", "FCM", "APNS"]
