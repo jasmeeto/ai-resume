@@ -158,14 +158,61 @@ section h2 {
 @media print {
   @page {
     size: letter;
-    margin: 0.5in 0.54in;
+    margin: 0.4in 0.5in;
   }
   body {
-    font-size: 10pt;
+    font-size: 9pt;
+    line-height: 1.25;
   }
   #resume {
     padding: 0;
     max-width: none;
+  }
+  .header {
+    margin-bottom: 0.4em;
+  }
+  .header h1 {
+    font-size: 22pt;
+    margin: 0 0 0.15em;
+  }
+  .header .label {
+    font-size: 10pt;
+    margin-bottom: 0.25em;
+  }
+  .contact {
+    font-size: 8.5pt;
+  }
+  .contact i {
+    margin-right: 0.25em;
+  }
+  section {
+    margin-bottom: 0.6em;
+  }
+  section h2 {
+    font-size: 11pt;
+    padding-top: 0.25em;
+    margin: 0 0 0.35em;
+  }
+  .skills-list li {
+    margin-bottom: 0.2em;
+  }
+  .entry {
+    margin-bottom: 0.5em;
+    padding-bottom: 0.4em;
+  }
+  .entry ul.highlights {
+    margin: 0.2em 0 0;
+    padding-left: 1.1em;
+  }
+  .entry ul.highlights li {
+    margin-bottom: 0.1em;
+  }
+  .entry .keywords {
+    font-size: 8pt;
+    margin-top: 0.2em;
+  }
+  .entry-subheader {
+    margin-bottom: 0.25em;
   }
 }
 
